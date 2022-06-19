@@ -40,3 +40,11 @@ hijo2.remove(); //hace lo de arriba pero mas corto
 const nodeH2 = document.createElement('h2');
 nodeH2.textContent = 'Antes era un h3, ahora soy h2 :DDD'
 h3.parentElement.replaceChild(nodeH2, h3); //reemplaza el segundo argumento por el primero
+
+const nodes = [];
+for (let i = 0; i < 100; i++) {
+    const node = document.createElement('input');
+    nodes.push(node);
+}
+
+document.body.append(...nodes); //podemos usar spread operator para que todos los elementos de nodes sean hijos del body 
