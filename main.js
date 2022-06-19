@@ -27,3 +27,16 @@ const referencia2 = document.querySelector('h2');
 const nodo = document.createElement('span');
 
 referencia2.insertAdjacentElement('afterend', nodo); //nos da un mejor control, hay 4 metodos
+
+const padre = document.querySelector('.padre-div');
+const hijo = document.querySelector('div p')
+padre.removeChild(hijo); //elimina ese hijo
+
+const hijo2 = document.querySelector('div h2');
+console.log(hijo2.parentElement); //parent element reotrna el padre
+//hijo2.parentElement.removeChild(hijo2); //podemos removerlo directamente consolo crear una varibale del hijo y asi no crear otra para el padre
+hijo2.remove(); //hace lo de arriba pero mas corto
+
+const nodeH2 = document.createElement('h2');
+nodeH2.textContent = 'Antes era un h3, ahora soy h2 :DDD'
+h3.parentElement.replaceChild(nodeH2, h3); //reemplaza el segundo argumento por el primero
