@@ -12,3 +12,14 @@ p.addEventListener('click', (evento) => {
     console.log(evento);
 });
 
+const action = (evento) => {
+    console.log(`hola desde: ${evento.currentTarget.nodeName}`);
+}
+
+document.body.addEventListener('click', action);
+
+const parrafo = document.querySelector('div h2 p');
+parrafo.addEventListener('click', (evento) => {
+    evento.stopPropagation(); //para que no ejecute los eventos de sus padres
+    console.log('soy un parrafo rebelde');
+});
